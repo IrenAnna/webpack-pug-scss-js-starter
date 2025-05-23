@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
         entry: 'src/views/pages/',
         // modify output filename of generated html as you want
         filename: ({ chunk }) => {
-          let [name] = chunk.name.split('/');
+          let [name] = chunk.name.split('\\');
           if (name === 'home') name = 'index';
           return `${name}.html`;
         },
